@@ -1,0 +1,96 @@
+<html>
+<head>
+<style>
+
+html, body {
+  
+  background-color:white;
+  overflow: hidden;
+  /* transform: scale(1.5); */
+}
+
+/* button */
+.btn {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">CYBER ATTACK</h1>
+The cyber attack domain refers to the ecosystem of activities, strategies, and technologies associated with cyber attacks and their defense. A cyber attack is any malicious attempt to disrupt, damage, or gain unauthorized access to digital systems, networks, or data. These attacks often target individuals, organizations, or nations, leveraging vulnerabilities in technology or human behavior.
+
+Common types of cyber attacks include malware, which involves harmful software; phishing, where deceptive techniques trick users into revealing sensitive data; ransomware, which encrypts data for ransom; and DDoS (Distributed Denial-of-Service) attacks, which overwhelm systems to disrupt services.
+
+Attackers use various vectors, such as exploiting software weaknesses, social engineering, or unsecured passwords, to infiltrate systems. The motives range from financial gain and espionage to disruption and activism.
+
+To counteract, the cyber attack domain also involves robust defensive strategies like firewalls, antivirus software, and encryption. Detection tools such as Intrusion Detection Systems (IDS) and threat intelligence play a critical role in identifying threats early. Incident response plans, backups, and timely patch updates mitigate damage and ensure recovery.
+
+This domain has broad implications, affecting economic stability, national security, and user privacy. With the rapid evolution of technology, understanding the cyber attack domain is essential for protecting digital assets and creating resilient security systems.
+<p style="color:black;font-size:24px;">
+<form action="cyberattacks_quizzz5.html">
+
+<center><button type="submit" class="btn" >Take Test</button></center>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<body>
+<style>
+
+html, body {
+  
+  background-color:white;
+  overflow: hidden;
+  /* transform: scale(1.5); */
+}
+
+/* button */
+.btn {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+</style>
+<h1 style="text-align:center;">DATA Engineering</h1>
+<p style="color:black;font-size:24px;">
+Data engineering focuses on designing, building, and maintaining systems to handle large volumes of data efficiently. It involves creating ETL/ELT pipelines to extract, transform, and load data from various sources into databases, warehouses, or lakes. Data engineers ensure data quality, accuracy, and reliability while integrating disparate sources like APIs and cloud platforms. They optimize storage solutions and query performance, leveraging tools like Apache Spark, Kafka, and cloud services (AWS, Azure, GCP). The role also includes automating workflows, enforcing data security and governance, and supporting analysts and scientists by providing clean, structured data. With expertise in languages like Python, SQL, and Scala, data engineers enable scalable and real-time processing for modern data-driven applications.</p>
+<form action="dataengineer_quizzz3.html">
+
+<center><button type="Take Test" class="btn">Take Test</button></center>
+</body>
+</html>

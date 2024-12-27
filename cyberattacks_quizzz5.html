@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>quizzz</title>
+<style>
+body{
+ font-size:large;
+ border:0px soild;
+ background-color:HoneyDew;
+ }
+.question{
+   color:black;
+   font-size:50px;
+   margin:20px;
+}
+.choice{
+color:MediumAquaMarine;
+border-size:0px;
+padding:10px;
+margin:40px;
+font-size:40px;
+}
+button{
+font-size:25px;
+}
+.image
+{
+direaction="up";
+font-size:xx-large;
+}
+.acre{
+width:100%;
+height:50px;
+background-color:brown;
+text-align:center;
+}
+.main1{
+position:absolute;
+top:60px;
+right:280px;
+width:10px;
+}
+.main2{
+position:absolute;
+top:1000px;
+right:280px;
+width:10px;
+}
+</style>
+</head>
+<script>
+function answer()
+{
+alert("congratulations!!you complete the quizzz");
+}
+function check1()
+{
+alert("C");
+}
+function check2()
+{
+alert("C");
+}
+function check3()
+{
+alert("D");
+}
+function check4()
+{
+alert("B");
+}
+function check5(){
+alert("A");
+}
+</script>
+<body>
+<div class="acre">
+<h1><center>Simple Quizzzz</center></h1></div>
+<div class="main1">
+<img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/quiz-9393302-7625758.png?f=webp&w=256" alt="join"></div>
+<div class="question">
+ <p><b>1. Which of the following is a type of cyber attack that encrypts data and demands a ransom for its release?</b></p></div>
+ <ul class="choice">
+ <li><input type="radio" name="question1" value="a"> A) Phishing</li>
+ <li><input type="radio" name="question1" value="b"> B) Malware</li>
+ <li><input type="radio" name="question1" value="c"> C)Ransomware</li>
+ <li><input type="radio" name="question1" value="d"> D)DDoS (Distributed Denial-of-Service)</li>
+ </ul>
+  <center><input type =button onclick=check1() value="view answer"/></center>
+ <marquee behavior="scroll" direction="left">
+            <img src="C:\Users\HP\Downloads\18-1.png" alt="go"></marquee>
+ <ul class="choice">
+ <div class="question">
+ <p><b>2. What is the primary purpose of a DDoS (Distributed Denial-of-Service) attack?</b></p>
+ </div>
+ <ul class="choice">
+ <li><input type="radio" name="question2" value="a">A)To steal sensitive information from users</li>
+ <li><input type="radio" name="question2" value="b">B) To encrypt data for ransom</li>
+ <li><input type="radio" name="question2" value="c">C) To overwhelm a system and disrupt services</li>
+ <li><input type="radio" name="question2" value="d">D)To gain unauthorized access to data</li>
+ </ul>
+  <center><input type =button onclick=check2() value="view answer"/></center>
+ <div class="main2">
+ <img src="https://cdn-icons-png.flaticon.com/256/8819/8819111.png" alt="oh">
+ </div>
+ </div>
+ <marquee behavior="slide" direction="up">
+            <img src="https://s1.stickers.cloud/packs/c2b3d232-03e1-4bb3-881d-509d9199bc15/png/6b7203f0-2b67-4ec7-a169-c4c450cd5e75.png">
+			</marquee>
+ <div class="question">
+ <p><b>3. Which of the following is NOT typically used as a defensive strategy against cyber attacks?</b></p></div>
+ <ul class="choice">
+ <li><input type="radio" name="question3" value="a">A)Firewalls</li>
+ <li><input type="radio" name="question3" value="b">B)Antivirus software</li>
+ <li><input type="radio" name="question3" value="c">C)Encryption</li>
+ <li><input type="radio" name="question3" value="d">D)Social engineering</li>
+ </ul>
+  <center><input type =button onclick=check3() value="view answer"/></center>
+
+ <div class="question">
+ <p><b>4.What is the main function of Intrusion Detection Systems (IDS) in cybersecurity?</b></p>
+ </div>
+ <ul class="choice">
+ <li><input type="radio" name="question4" value="a">A)To prevent malware from being downloaded</li>
+ <li><input type="radio" name="question4" value="b">B) To identify potential threats and attacks early</li>
+ <li><input type="radio" name="question4" value="c">C)To provide secure user authentication</li>
+ <li><input type="radio" name="question4" value="d">D) To encrypt sensitive data</li>
+ </ul>
+  <center><input type =button onclick=check4() value="view answer"/></center>
+ </div>
+ <div class="question">
+ <p><b>5.What is a common vector used by attackers in cyber attacks?</b></p>
+ <ul class="choice">
+ <li><input type="radio" name="question5" value="a">A) Exploiting software vulnerabilities</li>
+ <li><input type="radio" name="question5" value="b">B) Creating strong passwords</li>
+ <li><input type="radio" name="question5" value="c">C) Using firewalls to block access</li>
+ <li><input type="radio" name="question5" value="d">D)Encrypting data for securit</li>
+ </ul>
+  <center><input type =button onclick=check5() value="view answer"/></center>
+ <div class="image">
+ <marquee behavior="slide" direaction="up">
+ <img src="C:\Users\HP\Downloads\6-1.png" alt="continue">
+ </marquee>
+ <form action="certificate.html">
+
+<center><button type="submit" onclick="answer()" >Submit</button></center>
+</form>
+
+ 
+</body>
+</html>

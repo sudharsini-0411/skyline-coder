@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>quizzz</title>
+<style>
+body{
+ font-size:large;
+ border:0px soild;
+ background-color:HoneyDew;
+ }
+.question{
+   color:black;
+   font-size:50px;
+   margin:20px;
+}
+.choice{
+color:MediumAquaMarine;
+border-size:0px;
+padding:10px;
+margin:40px;
+font-size:40px;
+}
+button{
+font-size:25px;
+}
+.image
+{
+direaction="up";
+font-size:xx-large;
+}
+.acre{
+width:100%;
+height:50px;
+background-color:brown;
+text-align:center;
+}
+.main1{
+position:absolute;
+top:60px;
+right:280px;
+width:10px;
+}
+.main2{
+position:absolute;
+top:1000px;
+right:280px;
+width:10px;
+}
+</style>
+</head>
+<script>
+function answer()
+{
+alert("congratulations!!you complete the quizzz");
+}
+function check1()
+{
+alert("B");
+}
+function check2()
+{
+alert("A");
+}
+function check3()
+{
+alert("D");
+}
+function check4()
+{
+alert("B");
+}
+function check5(){
+alert("C");
+}
+</script>
+<body>
+<div class="acre">
+<h1><center>Simple Quizzzz</center></h1></div>
+<div class="main1">
+<img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/quiz-9393302-7625758.png?f=webp&w=256" alt="join"></div>
+<div class="question">
+ <p><b>1.Which of the following is NOT a key responsibility of a Data Scientist?</b></p></div>
+ <ul class="choice">
+ <li><input type="radio" name="question1" value="a"> A) Building and deploying machine learning models</li>
+ <li><input type="radio" name="question1" value="b"> B)Managing a company's social media strategy</li>
+ <li><input type="radio" name="question1" value="c"> C)Performing exploratory data analysis(EDA)</li>
+ <li><input type="radio" name="question1" value="d"> D)Communicating findings through data visualization and reports</li>
+ </ul>
+  <center><input type =button onclick=check1() value="view answer"/></center>
+ <marquee behavior="scroll" direction="left">
+            <img src="C:\Users\HP\Downloads\18-1.png" alt="go"></marquee>
+ <ul class="choice">
+ <div class="question">
+ <p><b>2.What is the primary purpose of Exploratory Data Analysis (EDA)?</b></p>
+ </div>
+ <ul class="choice">
+ <li><input type="radio" name="question2" value="a">A)To uncover trends, patterns, and relationships in data</li>
+ <li><input type="radio" name="question2" value="b">B)To create reports and presentations for stakeholders</li>
+ <li><input type="radio" name="question2" value="c">C) To clean and preprocess large datasets</li>
+ <li><input type="radio" name="question2" value="d">D) To deploy machine learning models into production</li>
+ </ul>
+  <center><input type =button onclick=check2() value="view answer"/></center>
+ <div class="main2">
+ <img src="https://cdn-icons-png.flaticon.com/256/8819/8819111.png" alt="oh">
+ </div>
+ </div>
+ <marquee behavior="slide" direction="up">
+            <img src="https://s1.stickers.cloud/packs/c2b3d232-03e1-4bb3-881d-509d9199bc15/png/6b7203f0-2b67-4ec7-a169-c4c450cd5e75.png">
+			</marquee>
+ <div class="question">
+ <p><b>3. Which programming language is commonly used by Data Scientists for data analysis and machine learning tasks?</b></p></div>
+ <ul class="choice">
+ <li><input type="radio" name="question3" value="a">A) Java</li>
+ <li><input type="radio" name="question3" value="b">B)HTML</li>
+ <li><input type="radio" name="question3" value="c">C)PHP</li>
+ <li><input type="radio" name="question3" value="d">D)Python</li>
+ </ul>
+  <center><input type =button onclick=check3() value="view answer"/></center>
+
+ <div class="question">
+ <p><b>4.Which of the following tools is typically used by Data Scientists for data manipulation and analysis?</b></p>
+ </div>
+ 
+ <ul class="choice">
+ <li><input type="radio" name="question4" value="a">A)Adobe Photoshop</li>
+ <li><input type="radio" name="question4" value="b">B)Pandas</li>
+ <li><input type="radio" name="question4" value="c">C)Excel VBA</li>
+ <li><input type="radio" name="question4" value="d">D)Microsoft Word</li>
+ </ul>
+  <center><input type =button onclick=check4() value="view answer"/></center>
+ </div>
+ <div class="question">
+ <p><b>5. Which of the following best describes a key skill required for a Data Scientist?</b></p>
+ <ul class="choice">
+ <li><input type="radio" name="question5" value="a">A) Graphic design expertise</li>
+ <li><input type="radio" name="question5" value="b">B)Knowledge of cloud computing platforms</li>
+ <li><input type="radio" name="question5" value="c">C)Expertise in statistical analysis and machine learning</li>
+ <li><input type="radio" name="question5" value="d">D)Advanced project management skills</li>
+ </ul>
+  <center><input type =button onclick=check5() value="view answer"/></center>
+ <div class="image">
+ <marquee behavior="slide" direaction="up">
+ <img src="C:\Users\HP\Downloads\6-1.png" alt="continue">
+ </marquee>
+
+<form action="certificate.html">
+
+<center><button type="submit" onclick="answer()" >Submit</button></center>
+</form>
+ 
+</body>
+</html>

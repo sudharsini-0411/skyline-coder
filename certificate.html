@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Overall body styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Input container styling */
+        .input-container {
+            width: 500px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .input-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            font-size: 1.1em;
+        }
+
+        .input-container button {
+            width: 85%;
+            padding: 12px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: none;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .input-container button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        .input-container h2 {
+            color: #333;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Certificate container */
+        .certificate {
+            width: 800px;
+            padding: 50px;
+            background: #fff;
+            border: 10px solid #6a11cb;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: none; /* Hide until generated */
+            position: relative;
+        }
+
+        .certificate h1 {
+            font-size: 3em;
+            color: #2b3e50;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .certificate h2 {
+            font-size: 1.2em;
+            color: #5d7584;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .certificate .participant-name {
+            font-size: 2.5em;
+            font-family: 'Great Vibes', cursive;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #4b2a72;
+        }
+
+        .certificate .award-description {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #4d6475;
+            font-style: italic;
+        }
+
+
+        .certificate .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            color: #334e68;
+        }
+
+        .certificate .signatures div {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .certificate .signatures div p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #2b3e50;
+        }
+
+        .certificate .ribbon {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        .certificate .seal {
+            margin-top: 20px;
+        }
+
+        /* Download button styling */
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Input Form Section -->
+<div class="input-container">
+    <h2>Enter Certificate Details</h2>
+    <input type="text" id="participantName" placeholder="Participant Name" required>
+    <button onclick="generateCertificate()">Generate Certificate</button>
+</div>
+
+<!-- Certificate Section -->
+<div class="certificate" id="certificate">
+    <h1>Certificate of Completion</h1>
+    <div class="ribbon">of completion</div>
+    <h2>Presented to</h2>
+    <div class="participant-name" id="displayParticipantName">[Participant Name]</div>
+    <p class="award-description">
+        Won an award as a participant in the quiz competition presented  for demonstrating enthusiasm and commendable effort in the Quiz
+    </p>
+    
+    <div class="seal">
+        <img src="C:\Users\jpswe\Downloads\image.png" alt="Seal" width="100">
+    </div>
+
+</div>
+
+<!-- Download Button -->
+<button id="downloadBtn" class="download-button" style="display:none;">Download Certificate as PDF</button>
+
+<script>
+    function generateCertificate() {
+        const participantName = document.getElementById("participantName").value;
+        document.getElementById("displayParticipantName").textContent = participantName;
+        document.getElementById("certificate").style.display = "block";
+        document.getElementById("downloadBtn").style.display = "block";
+    }
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        html2canvas(document.getElementById('certificate')).then(function(canvas) {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF();
+            pdf.addImage(imgData, 'PNG', 0, 0);
+            pdf.save('certificate.pdf'); // Save the PDF
+        });
+    });
+
+</script>
+
+</body>
+</html>

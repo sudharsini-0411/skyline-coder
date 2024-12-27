@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Contact Us</title>
+    <h2>Contact Us</h2>
+
+    <p>We'd love to hear from you! Please reach out to us via any of the methods below:</p>
+
+    <h3>Contact Information</h3>
+    <p><strong>Email:</strong> support@example.com</p>
+    <p><strong>Phone:</strong> (123) 456-7890</p>
+    <p><strong>Fax:</strong> (123) 456-7891</p>
+    <p><strong>Address:</strong> 123 Business St, City, Country</p>
+    <p><strong>Business Hours:</strong> Monday - Friday, 9 AM - 6 PM</p>
+
+
+    <script>
+        function showAlert() {
+            alert("Thank you for contacting us!");
+        }
+    </script>
+</head>
+<body background="C:\Users\HP\Downloads\WhatsApp Image 2024-12-27 at 09.47.39_2fef854d.jpg" style="repeat: norepeat; background-size:cover">
+
+    <h2>Contact Form</h2>
+    <form onsubmit="showAlert(); return false;">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
