@@ -76,7 +76,7 @@ body {
 .wrapper .options label {
 	color: #fff;
 	font-size: 18px;
-	line-height: 3.5;
+	 line-height: 3.5;
 }
 .options input[type="checkbox"] {
 	width: 15px;
